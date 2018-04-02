@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace UUSA.Biz
 {
-    public class Visitor
+    /// <summary>
+    /// This class will inherit from the Person class.
+    /// </summary>
+    public class Visitor : Person
     {
+        #region Properties
+
+        public string CompanyName { get; set; }
+        public DateTime Arrival { get; set; }
+        public DateTime Departure { get; set; }
+
+        #endregion
     }
 }

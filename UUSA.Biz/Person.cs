@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace UUSA.Biz
 {
+    /// <summary>
+    /// This class defines a person.
+    /// </summary>
     public class Person
     {
         #region Properties
