@@ -14,8 +14,7 @@ namespace UUSA.Biz
         #region Properties
 
         public string CompanyName { get; set; }
-        public DateTime Arrival { get; set; }
-        public DateTime Departure { get; set; }
+        
 
         #endregion
     }

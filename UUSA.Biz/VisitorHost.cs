@@ -12,7 +12,6 @@ namespace UUSA.Biz
     public class VisitorHost : Person
     {
         #region Properties
-
         public string PhoneNumber { get; set; }
 
         #endregion

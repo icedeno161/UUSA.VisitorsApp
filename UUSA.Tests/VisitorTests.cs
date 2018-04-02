@@ -18,8 +18,6 @@ namespace UUSA.Tests
                 FirstName = "Ivan",
                 LastName = "Cedeno",
                 CompanyName = "UNICEF USA",
-                Arrival = dateNow,
-                Departure = dateNowPlus2
             };
             var expectedCompanyName = "UNICEF USA";
             var expectedArrival = dateNow;
@@ -29,8 +27,6 @@ namespace UUSA.Tests
 
             //Assert
             Assert.AreEqual(expectedCompanyName, visitor.CompanyName);
-            Assert.AreEqual(expectedArrival, visitor.Arrival);
-            Assert.AreEqual(expectedDeparture, visitor.Departure);
         }
     }
 }
