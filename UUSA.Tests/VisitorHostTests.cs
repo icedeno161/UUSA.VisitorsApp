@@ -25,6 +25,34 @@ namespace UUSA.Biz.Tests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void PhoneNumberLengthTest()
+        {
+            //Arrange
+            var visitorHost = new VisitorHost
+            {
+                FirstName = "Ivan",
+                LastName = "Cedeno",
+                PhoneNumber = "212867530097826" // not of length 10
+            };
+
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void PhoneNumberNumericTest()
+        {
+            //Arrange
+            var visitorHost = new VisitorHost
+            {
+                FirstName = "Ivan",
+                LastName = "Cedeno",
+                PhoneNumber = "212867530m" // not numeric
+            };
+
+        }
     }
 }
 
