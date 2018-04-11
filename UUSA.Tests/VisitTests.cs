@@ -106,5 +106,42 @@ namespace UUSA.Tests
             Assert.AreEqual(expectedHost, actualHost);
             Assert.AreEqual(expectedVisitorName, actualVisitor.FullName);
         }
+
+        [TestMethod]
+        public void VisitToStringTest()
+        {
+            //Arrange
+            var visit = new Visit
+            {
+                Host = new VisitorHost
+                {
+                    FirstName = "Ivan",
+                    LastName = "Cedeno",
+                    PhoneNumber = "2129222604"
+                },
+                Visitors = new List<Visitor>
+                {
+                    new Visitor
+                    {
+                        FirstName = "Bernie",
+                        LastName = "Cedeno",
+                        CompanyName = "Brooklyyn Rep"
+                    },
+                    new Visitor
+                    {
+                        FirstName = "Lauren",
+                        LastName = "Savage",
+                        CompanyName = "14StreetY"
+                    }
+                },
+                Arrival = DateTime.Now.AddDays(1),
+                Departure = DateTime.Now.AddDays(1).AddHours(2)
+            };
+
+            //Act
+            Console.WriteLine(visit.ToString());
+            //Assert
+            Assert.IsNotNull(visit);
+        }
     }
 }

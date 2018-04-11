@@ -34,5 +34,27 @@ namespace UUSA.Biz
         }
 
         #endregion
+
+        #region Methods
+
+        public override string ToString()
+        {
+            var stringBuilder = new StringBuilder();
+
+            stringBuilder.AppendLine($"Host: {Host.FullName}");
+            stringBuilder.AppendLine($"Arrival: {Arrival.ToString()}");
+            stringBuilder.AppendLine($"Departure: {Departure.ToString()}");
+            stringBuilder.AppendLine();
+            stringBuilder.AppendLine("Visitors:\r\n");
+
+            foreach (var v in Visitors)
+            {
+                stringBuilder.AppendLine($"{v.FullName}");
+            }
+
+            return stringBuilder.ToString();
+        }
+
+        #endregion
     }
 }
